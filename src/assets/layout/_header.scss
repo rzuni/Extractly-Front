@@ -97,20 +97,20 @@
   cursor: pointer;
   position: relative;
 
-  &:hover {
-    .onhover-show-div {
-      @extend %for-animated-hover-box;
-    }
-  }
+  // &:hover {
+  //   .onhover-show-div {
+  //     @extend %for-animated-hover-box;
+  //   }
+  // }
 }
 
 .onhover-show-div {
   top: 80px;
   position: absolute;
   z-index: 8;
-  background-color: $white;
+  background-color: $color-text;
   transition: all linear 0.3s;
-  @extend %for-animated-hover;
+  // @extend %for-animated-hover;
 
   li {
     a {

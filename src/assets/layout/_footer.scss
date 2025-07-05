@@ -3,7 +3,7 @@
 ==========================**/
 .footer{
   background-color: $footer_bg_color;
-  box-shadow: $footer_box_shadow;
+  // box-shadow: $footer_box_shadow;
   padding: 15px;
   bottom: 0;
   left: 0;
@@ -12,7 +12,7 @@
   &.footer-dark{
     background-color: $footer_dark_color;
     p{
-      color: $white;
+      color: $color-text;
     }
   }
 }

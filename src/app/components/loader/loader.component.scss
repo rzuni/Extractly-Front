@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-color: $white;
+  background-color: $color-text;
   z-index: 11;
   top: 0;
   /*Color Loader*/
@@ -57,7 +57,7 @@
         content: "";
         width: 2em;
         height: 2em;
-        background: $info-color;
+        // background: $info-color;
         border-radius: 50%;
         position: absolute;
         right: 3em;
@@ -70,7 +70,7 @@
   @keyframes grow {
     0% {
       transform: scale(0.5);
-      background: $info-color;
+      // background: $info-color;
     }
 
     50% {
@@ -126,7 +126,6 @@
       position: absolute;
       content: "";
       height: 1px;
-      background: linear-gradient(to right, var(--theme-secondary), var(--theme-deafult), $info-color);
       color: #fff;
       top: 2.75em;
       left: 0.75em;
@@ -155,7 +154,7 @@
   }
 
   .loader-3 {
-    border: .2em solid $info-color;
+    // border: .2em solid $info-color;
     border-bottom-color: transparent;
     border-radius: 50%;
     animation: 1s loader-03 linear infinite;
