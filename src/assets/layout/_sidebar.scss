@@ -53,7 +53,7 @@
 }
 
 %for-animated-hover {
-  box-shadow: $main-header-shadow;
+  // box-shadow: $main-header-shadow;
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
@@ -72,7 +72,7 @@
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid $white;
+    border-bottom: 7px solid $color-text;
     content: "";
     top: -7px;
     position: absolute;
@@ -85,7 +85,7 @@
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid $light-background;
+    // border-bottom: 7px solid $light-background;
     content: "";
     top: -7px;
     position: absolute;
@@ -104,7 +104,7 @@
     top: $main-header-top;
     z-index: $main-header-z-index;
     transition: $sidebar-transition;
-    background-color: $white;
+    background-color: $color-text;
     box-shadow: $main-header-shadow-1;
     .header-wrapper {
       width: 100%;
@@ -115,7 +115,7 @@
         padding: 22px 20px;
       }
       .search-full {
-        background-color: $white;
+        background-color: $color-text;
         position: absolute;
         right: 0;
         z-index: 3;
@@ -126,7 +126,7 @@
         top: 0;
         .Typeahead-menu {
           top: 90%;
-          background: $white;
+          background: $color-text;
           width: calc(100% - 20px);
           left: 50%;
           transform: translateX(-50%);
@@ -155,7 +155,7 @@
             font-size: 15px;
             right: 30px;
             top: 30px;
-            color: $dark-gray;
+            // color: $dark-gray;
             cursor: pointer;
           }
 

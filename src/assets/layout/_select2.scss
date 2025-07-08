@@ -7,7 +7,7 @@
 
 .add-post {
   #cke_text-box {
-    border: 1px solid $light-semi-gray;
+    // border: 1px solid $light-semi-gray;
   }
 
   form {
@@ -18,7 +18,7 @@
     }
 
     .form-control {
-      border: 1px solid $light-semi-gray;
+      // border: 1px solid $light-semi-gray;
     }
 
     .col-form-label {
@@ -38,7 +38,7 @@
         }
 
         .select2-selection--multiple {
-          border: 1px solid $light-semi-gray;
+          // border: 1px solid $light-semi-gray;
           max-width: 100%;
 
           .select2-selection__rendered {
@@ -69,7 +69,7 @@
 .select2-drpdwn {
   .select2-selection {
     border-radius: 0 !important;
-    border-color: $light-color !important;
+    // border-color: $light-color !important;
     height: 40px !important;
     padding: 5px;
   }
@@ -89,63 +89,63 @@
   }
 
   .form-control-success {
-    border-color: $success-color;
-    color: $success-color;
+    // border-color: $success-color;
+    // color: $success-color;
   }
 
   .form-control-info {
-    border-color: $info-color;
-    color: $info-color;
+    // border-color: $info-color;
+    // color: $info-color;
   }
 
   .form-control-warning {
-    border-color: $warning-color;
-    color: $warning-color;
+    // border-color: $warning-color;
+    // color: $warning-color;
   }
 
   .form-control-danger {
-    border-color: $danger-color;
-    color: $danger-color;
+    // border-color: $danger-color;
+    // color: $danger-color;
   }
 
   .form-control-inverse {
-    border-color: $dark-color;
-    color: $dark-color;
+    // border-color: $dark-color;
+    // color: $dark-color;
   }
 
   .form-control-primary-fill {
-    background-color: var(--theme-default);
-    color: $white;
+    // background-color: var(--theme-default);
+    // color: $white;
   }
 
   .form-control-secondary-fill {
-    background-color: var(--theme-secondary);
-    color: $white;
+    // background-color: var(--theme-secondary);
+    // color: $white;
   }
 
   .form-control-success-fill {
-    background-color: $success-color;
-    color: $white;
+    // background-color: $success-color;
+    // color: $white;
   }
 
   .form-control-info-fill {
-    background-color: $info-color;
-    color: $white;
+    // background-color: $info-color;
+    // color: $white;
   }
 
   .form-control-warning-fill {
-    background-color: $warning-color;
-    color: $white;
+    // background-color: $warning-color;
+    // color: $white;
   }
 
   .form-control-danger-fill {
-    background-color: $danger-color;
-    color: $white;
+    // background-color: $danger-color;
+    // color: $white;
   }
 
   .form-control-inverse-fill {
-    background-color: $dark-color;
-    color: $white;
+    // background-color: $dark-color;
+    // color: $white;
   }
 }
 
@@ -171,12 +171,12 @@ $color_cape_cod_approx: #424242;
       margin-top: 0 !important;
       background-color: var(--theme-default) !important;
       border-color: var(--theme-default) !important;
-      color: $white;
+      color: $color-text;
       margin-right: 8px !important;
     }
 
     .select2-selection__choice__remove {
-      color: $white !important;
+      color: $color-text !important;
       float: right;
       margin-left: 0.5rem;
     }
@@ -189,7 +189,7 @@ $color_cape_cod_approx: #424242;
 
   .select2-results__options .select2-results__option[aria-selected="true"] {
     background-color: var(--theme-default) !important;
-    color: $white !important;
+    color: $color-text !important;
   }
 }
 
@@ -207,12 +207,12 @@ $color_cape_cod_approx: #424242;
       margin-top: 0 !important;
       background-color: var(--theme-default) !important;
       border-color: var(--theme-default) !important;
-      color: $white;
+      color: $color-text;
       margin-right: 8px !important;
     }
 
     .select2-selection__choice__remove {
-      color: $white !important;
+      color: $color-text !important;
       float: right;
       margin-left: 0.5rem;
     }
@@ -225,7 +225,7 @@ $color_cape_cod_approx: #424242;
 
   .select2-results__options .select2-results__option[aria-selected="true"] {
     background-color: var(--theme-default) !important;
-    color: $white !important;
+    color: $color-text !important;
   }
 }
 
