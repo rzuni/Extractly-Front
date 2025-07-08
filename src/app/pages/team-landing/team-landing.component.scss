@@ -1,0 +1,24 @@
+@import '../../../assets/utils/variables';
+
+
+.hero {
+  background-color: $background-color;
+  color: $color-text;
+  font-family: $primary-text;
+}
+
+.contact {
+  background-color: $main-body-color;
+
+  input,
+  textarea {
+    background-color: $form-input-bg-color;
+    border-color: $form-input-border-color;
+    font-family: $normal-text;
+  }
+}
+
+footer {
+  background-color: $footer_bg_color;
+  box-shadow: $footer_box_shadow;
+}

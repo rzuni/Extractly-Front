@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { AppLayoutComponent } from './components/app-layout/app-layout.component';
@@ -107,7 +108,12 @@ export const routes: Routes = [
           name: 'orders',
           showInSidebar: true
         }
-      }
+      },
+      {
+      path: 'equipo',
+      loadComponent: () =>
+      import('./pages/team-landing/team-landing.component').then(m => m.TeamLandingComponent)
+      } 
     ],
   },
 ];
