@@ -7,5 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './team-landing.component.html',
   styleUrls: ['./team-landing.component.scss']
+  
 })
 export class TeamLandingComponent { }
+

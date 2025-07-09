@@ -59,7 +59,7 @@
   .info-block {
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid $light-color;
+    // border: 1px solid $light-color;
 
     a {
       color: #656565;
@@ -105,13 +105,13 @@
       color: #586082;
 
       + li {
-        border-left: 1px solid lighten($dark-color, 50%);
+        // border-left: 1px solid lighten($dark-color, 50%);
         padding-left: 8px;
         margin-left: 8px;
       }
 
       i {
-        color: $warning-color;
+        // color: $warning-color;
         &:not(:last-child) {
           margin-right: 4px;
         }

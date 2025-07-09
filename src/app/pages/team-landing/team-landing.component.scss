@@ -1,24 +1,137 @@
 @import '../../../assets/utils/variables';
 
-
 .hero {
   background-color: $background-color;
   color: $color-text;
   font-family: $primary-text;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    color: $light-text;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+  }
+
+  .btn-outline-light {
+    border-color: $color-text;
+    color: $color-text;
+
+    &:hover {
+      background-color: $color-text;
+      color: $background-color;
+    }
+  }
+}
+
+.team {
+  background-color: $card-body-color;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .card {
+    background-color: $white;
+    border-color: $card-border-color;
+    box-shadow: 0 0 10px rgba($dark-color, 0.05);
+  }
+
+  h3 {
+    font-family: $secondary-text;
+  }
+
+  p {
+    font-family: $normal-text;
+    color: $light-text;
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    background-color: $secondary-color;
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
 }
 
 .contact {
   background-color: $main-body-color;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
-  input,
-  textarea {
+  h3 {
+    font-family: $secondary-text;
+    font-weight: 600;
+  }
+
+  p {
+    color: $light-text;
+  }
+
+  .form-control {
     background-color: $form-input-bg-color;
     border-color: $form-input-border-color;
     font-family: $normal-text;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+  }
+}
+
+.tools {
+  background-color: $card-body-color;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  h3 {
+    font-family: $secondary-text;
+    font-weight: 600;
+  }
+
+  .card {
+    background-color: $white;
+    border-color: $card-border-color;
+    box-shadow: 0 0 10px rgba($dark-color, 0.05);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-title {
+      font-weight: bold;
+      color: $dark-color;
+    }
+
+    .text-muted {
+      font-size: 0.8rem;
+    }
   }
 }
 
 footer {
   background-color: $footer_bg_color;
   box-shadow: $footer_box_shadow;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  a {
+    color: $light-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $dark-color;
+    }
+  }
 }

@@ -38,13 +38,13 @@
       .call-icons {
         ul {
           li {
-            border: 1px solid $dark-gray;
+            // border: 1px solid $dark-gray;
           }
         }
       }
       .total-time {
         h2 {
-          color: $dark-gray;
+          // color: $dark-gray;
         }
       }
       .call-content {
@@ -359,7 +359,7 @@
       .nav-item {
         a {
           padding: 13px 4px !important;
-          color: $semi-dark !important;
+          // color: $semi-dark !important;
           letter-spacing: 0;
           font-size: 12px !important;
           line-height: 6;
@@ -862,7 +862,7 @@
       .nav-item {
         a {
           padding: 13px 4px !important;
-          color: $semi-dark !important;
+          // color: $semi-dark !important;
           letter-spacing: 0;
           font-size: 12px !important;
           line-height: 6;
@@ -1307,7 +1307,7 @@
     .maintenance-icons {
       li {
         i {
-          color: $light-color;
+          // color: $light-color;
           font-size: 40px;
         }
 
@@ -1477,14 +1477,14 @@
 
   .chat-menu {
     right: 0;
-    border-top: 1px solid $light-semi-gray;
+    // border-top: 1px solid $light-semi-gray;
     opacity: 0;
     transform: translateY(-30px);
     visibility: hidden;
     top: 60px;
     position: absolute !important;
     z-index: 3;
-    background-color: $white;
+    background-color: $color-text;
     transition: all linear 0.3s;
 
     &.show {
@@ -3121,7 +3121,7 @@
               &:before {
                 position: absolute;
                 content: "\e661";
-                font-family: $font-themify;
+                // font-family: $font-themify;
                 font-size: 18px;
                 top: 11px;
                 left: 20px;
@@ -3314,7 +3314,7 @@
     .maintenance-icons {
       li {
         i {
-          color: $light-color;
+          // color: $light-color;
           font-size: 30px;
         }
 
@@ -3948,7 +3948,7 @@
   .feature-products {
     .filter-toggle {
       padding: 8px 15px;
-      background-color: $white;
+      background-color: $color-text;
       margin-left: 10px;
       border-radius: 5px;
     }
@@ -4010,9 +4010,9 @@
         position: absolute;
         width: 0;
         height: 0;
-        border-left: 7px solid $transparent-color;
-        border-right: 7px solid $transparent-color;
-        border-bottom: 7px solid $white;
+        // border-left: 7px solid $transparent-color;
+        // border-right: 7px solid $transparent-color;
+        border-bottom: 7px solid $color-text;
         right: 120px;
         top: -7px;
       }
@@ -4168,7 +4168,7 @@
     width: calc(100% - 30px);
     left: 15px;
     height: calc(100% - 30px);
-    background-color: rgba($white, 0.7);
+    background-color: rgba($color-text, 0.7);
 
     .form-inline {
       width: 90%;
@@ -5158,7 +5158,7 @@
 
               &:before {
                 content: "\e64a";
-                font-family: $font-themify;
+                // font-family: $font-themify;
                 font-size: 11px;
                 padding: 0 5px;
               }
@@ -5174,7 +5174,7 @@
 
               &:before {
                 content: "\e649";
-                font-family: $font-themify;
+                // font-family: $font-themify;
                 font-size: 11px;
                 padding: 0 5px;
               }
@@ -5399,17 +5399,17 @@
   }
 
   /* alert responsive css start here */
-  $alert-name: primary, secondary, success, danger, warning, info, light, dark;
-  $alert-color: var(--theme-default), $secondary-color, $success-color,
-    $danger-color, $warning-color, $info-color, $light-color, $dark-color;
+  // $alert-name: primary, secondary, success, danger, warning, info, light, dark;
+  // $alert-color: var(--theme-default), $secondary-color, $success-color,
+  //   $danger-color, $warning-color, $info-color, $light-color, $dark-color;
 
-  @each $var in $alert-name {
-    $i: index($alert-name, $var);
+  // @each $var in $alert-name {
+  //   $i: index($alert-name, $var);
 
-    .alert-#{$var}.inverse {
-      background-color: transparent;
-    }
-  }
+  //   .alert-#{$var}.inverse {
+  //     background-color: transparent;
+  //   }
+  // }
 
   .alert {
     .close {
@@ -5432,8 +5432,8 @@
         padding: 20px;
 
         .user-designation {
-          border-top: 1px solid $light-color;
-          border-bottom: 1px solid $light-color;
+          // border-top: 1px solid $light-color;
+          // border-bottom: 1px solid $light-color;
           margin-bottom: 15px;
           padding: 15px 0px;
         }
@@ -5941,7 +5941,7 @@
       margin-right: unset;
     }
   }
-}
+
 
 @media only screen and (max-width: 480px) {
   .page-wrapper .page-header .header-wrapper .nav-right .onhover-show-div {
@@ -6922,6 +6922,7 @@
       }
     }
   }
+}
 }
 
 /**=====================
