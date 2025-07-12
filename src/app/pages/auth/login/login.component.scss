@@ -10,7 +10,7 @@
   font-family: $secondary-text; 
   color: $color-text; 
   overflow: hidden;
-  background-image: url("../../../../assets/img/login/FondoLogin1.jpg");
+  background: linear-gradient(to bottom, $primary-color, $secondary-color);
 
   .background-overlay {
     position: absolute;
@@ -81,11 +81,11 @@
   }
 
   .login-card {
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(#E9E6E3, 0.25);
+    backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 2rem;
+    color: $background-color;
     
     .form-group {
       margin-bottom: 1.5rem;
@@ -107,14 +107,14 @@
           border: none;
           background: transparent;
           padding: 0.75rem 0.5rem;
-          color: $color-text;
+          color: $background-color;
           outline: none;
           &::placeholder {
-             color: $color-text;
+             color: $background-color;
           }
         }
         i {
-           color: $color-text;
+           color: $background-color;
         }
       }
     }
@@ -123,7 +123,7 @@
       display: block;
       text-align: right;
       font-size: 0.8rem;
-      color: $color-text;
+      color: $background-color;
       margin-bottom: 1.5rem;
       text-decoration: none;
       &:hover {
@@ -136,7 +136,7 @@
       padding: 0.85rem;
       border: none;
       border-radius: 10px;
-      background: $primary-color;
+      background: linear-gradient(to left, #ff7e10, #81a969);
       color: $color-text;
       font-size: 1rem;
       font-weight: 600;
@@ -170,7 +170,7 @@
       padding: 0.75rem;
       border: none;
       border-radius: 10px;
-      background: $primary-color;
+      background: linear-gradient(to left, #ff7e10, #81a969);
       color: $color-text;
       font-size: 0.95rem;
       font-family: $normal-text;
