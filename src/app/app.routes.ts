@@ -30,13 +30,12 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'app/dashboard',
     pathMatch: 'full',
   },
   {
     path: 'app',
     component: AppLayoutComponent,
-    canActivate: [AuthGuard],
     children: [
       {
         path: 'app',
@@ -66,7 +65,6 @@ export const routes: Routes = [
             IRoleType.user
           ],
           name: 'Dashboard',
-          showInSidebar: true
         }
       },
       {
