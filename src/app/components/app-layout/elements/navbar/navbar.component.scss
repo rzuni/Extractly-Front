@@ -4,7 +4,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: #111;
+  background-color: $terciary-color;
   padding: 0.5rem 0;
 
   .container {
@@ -42,7 +42,7 @@ header {
 
     a {
       font-family: $secondary-text;
-      color: $color-text;
+      color: $background-color;
       font-size: 1.1rem;
       text-decoration: none;
       transition: color 0.3s ease;
@@ -74,8 +74,8 @@ header {
 
       &.outline {
         background-color: transparent;
-        color: $color-text;
-        border: 1px solid $color-text;
+        color:black;
+        border: 1px solid $primary-color;
 
         &:hover {
           background-color: $primary-color;
