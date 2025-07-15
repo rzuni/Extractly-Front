@@ -12,6 +12,7 @@ import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { GamesComponent } from './pages/games/games.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.page';
 
 export const routes: Routes = [
   {
@@ -107,6 +108,10 @@ export const routes: Routes = [
           name: 'orders',
           showInSidebar: true
         }
+      },
+      {
+      path: 'content-entry-yt',
+      component: ContentEntryYtPage
       }
     ],
   },

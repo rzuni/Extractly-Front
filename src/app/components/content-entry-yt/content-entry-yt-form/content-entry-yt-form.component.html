@@ -1,0 +1,32 @@
+<div class="content-entry-yt-form">
+  <h2>Sube tu Contenido</h2>
+  <p>Selecciona tu archivo o pega un enlace.</p>
+
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Archivo</label>
+      <input type="file" />
+      <small>Hasta 100MB</small>
+    </div>
+
+    <div class="form-group">
+      <label>Enlace de YouTube/Spotify</label>
+      <input type="text" placeholder="Pega tu enlace aquí..." />
+      <small>Ejemplo: https://www.youtube.com/watch?v=abc123</small>
+    </div>
+  </div>
+
+  <!-- <div class="language-select">
+    <label>Selector de Idioma</label>
+    <div class="buttons">
+      <button [class.active]="selectedLanguage === 'es'" (click)="setLanguage('es')">Español</button>
+      <button [class.active]="selectedLanguage === 'en'" (click)="setLanguage('en')">Inglés</button>
+    </div>
+    <small>Selecciona el idioma del contenido.</small>
+  </div> -->
+
+  <div class="action-buttons">
+    <button class="clear" (click)="clearFields()">Limpiar Campos</button>
+    <button class="submit" (click)="submitForm()">Procesar Contenido</button>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+@import '../../../../assets/utils/variables';
+
+.content-entry-yt-list {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+
+  .entry-card {
+    background-color: $card-body-color;
+    padding: 1.5rem;
+    border-radius: $card-border-radious;
+    box-shadow: $card-box-shadow;
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-family: $primary-text;
+        font-size: 1.25rem;
+        color: $theme-font-color;
+      }
+
+      span {
+        font-size: 0.875rem;
+        color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+
+    .entry-content {
+      margin-top: 1rem;
+      font-family: $normal-text;
+      color: $theme-body-font-color;
+    }
+
+    .entry-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: $btn-padding;
+        font-size: $btn-font-size;
+        border-radius: $form-control-border-radious;
+        border: none;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $primary-color;
+          color: $white;
+        }
+
+        &:last-child {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
