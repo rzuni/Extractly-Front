@@ -1,0 +1,42 @@
+<header>
+  <div class="container">
+    <!-- Logo a la izquierda -->
+    <div class="logo">
+      <a routerLink="/" class="d-flex align-items-center text-decoration-none">
+        <img
+          src="../../../../../assets/img/Logo/Logo_Extractly.webp"
+          alt="Extractly Logo"
+        />
+        <span>Extractly</span>
+      </a>
+    </div>
+
+    <!-- Navegación centrada -->
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#precios">Precios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Botones y perfil a la derecha -->
+    <div class="right-side">
+      <div class="actions" *ngIf="!authService.check()">
+        <button class="outline" routerLink="/login">Iniciar Sesión</button>
+        <button class="primary" routerLink="/signup">Registrarse</button>
+      </div>
+
+      <div class="page-header" [ngClass]="{ close_icon: !layoutService.navbarOpen }" *ngIf="authService.check()">
+        <div class="header-wrapper">
+          <div class="nav-right">
+            <ul class="nav-menus">
+              <li class="profile-nav onhover-dropdown">
+                <app-my-account></app-my-account>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

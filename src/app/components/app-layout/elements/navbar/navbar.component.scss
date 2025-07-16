@@ -1,0 +1,144 @@
+@import '../../../../../assets/utils/variables';
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #111;
+  padding: 0.5rem 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 130px;
+      height: auto;
+    }
+
+    span {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    a {
+      font-family: $secondary-text;
+      color: $color-text;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+
+    button {
+      font-family: $normal-text;
+      font-size: 1.05rem;
+      padding: 0.5rem 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.outline {
+        background-color: transparent;
+        color: $color-text;
+        border: 1px solid $color-text;
+
+        &:hover {
+          background-color: $primary-color;
+          border: none;
+        }
+      }
+
+      &.primary {
+        background-color: $primary-color;
+        color: $color-text;
+
+        &:hover {
+          background-color: darken($primary-color, 15%);
+        }
+      }
+    }
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    color: $color-text;
+    padding: 0.75rem 0;
+
+    &.close_icon {
+      display: none;
+    }
+
+    .header-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+
+        .nav-menus {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li.profile-nav {
+            padding-right: 1rem;
+            font-size: 1.15rem;
+
+            app-my-account {
+              font-size: 1.15rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    .actions button.outline {
+      display: none;
+    }
+  }
+}
