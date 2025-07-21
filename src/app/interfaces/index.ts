@@ -73,3 +73,14 @@ export interface ISearch {
   totalElements?: number;
   totalPages?:number;
 }
+
+export interface IForgotPasswordRequest{
+  email: string;
+}
+
+export interface IResetPassword {
+  token: string;
+  newPassword: string;
+  confirmPassword: string;
+
+}

@@ -1,51 +1,201 @@
+@import '../../../../assets/utils/variables';
+
 .login-container {
-  height: 100vh;
-  // background-image: url("../../../../assets/img/login/login-bg.jpg");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px 20%;
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
-    z-index: 1;
-  }
-  .login-card {
-    position: relative;
-    z-index: 2;
-    width: 50%;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom , #ff7e10, #81a969);
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .logo-img {
+    width: 150px;
     margin: 0 auto;
-    background-color: #fff;
+    display: block;
   }
-  .invalid-feedback {
-    position: absolute;
-    margin-top: 0px;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-family: $primary-text;
+    font-size: 1.75rem;
+    color: $background-color;
   }
-  @media screen and (min-width: 801px) and (max-width: 1500px) {
-    padding: 20px 5%;
-    .login-card {
-      width: 60%;
-      .login-main {
-        padding: 0px;
-      }
+
+  .subtitle {
+    font-family: $normal-text;
+    color: $background-color;
+  }
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  position: relative;
+
+  label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-control {
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    background-color: rgba($terciary-color, 0.35);
+    font-family: $normal-text;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+
+    &.is-invalid {
+      border-color: #dc3545;
+    }
+
+    &.is-valid {
+      border-color: #198754;
     }
   }
-  @media screen and (max-width: 800px) {
-    padding: 20px 5%;
-    .login-card {
-      width: 100%;
-      .login-main {
-        padding: 0px;
-      }
+
+  .invalid-feedback {
+    font-size: 0.85rem;
+    color: #dc3545;
+    position: absolute;
+    bottom: -1.2rem;
+  }
+}
+
+.password-field {
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+}
+
+.form-feedback {
+  margin-bottom: 1rem;
+
+  .error-msg {
+    color: #dc3545;
+  }
+
+  .success-msg {
+    color: #198754;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff7e10, #81a969);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: linear-gradient(to right, #e6690e, #739157);
+    transform: scale(1.02);
+  }
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+  }
+
+  span {
+    padding: 0 0.75rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+}
+
+.google-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #ff7e10, #81a969);
+  color: $color-text;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+  }
+}
+
+.login-redirect {
+  text-align: center;
+  margin-top: 1rem;
+
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.footer-links {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+
+  a {
+    margin: 0 0.75rem;
+    color: #333;
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary-color;
     }
   }
 }

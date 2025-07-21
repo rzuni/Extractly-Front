@@ -12,6 +12,8 @@ import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { GamesComponent } from './pages/games/games.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
+import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
 
 export const routes: Routes = [
   {
@@ -25,18 +27,27 @@ export const routes: Routes = [
     canActivate: [GuestGuard],
   },
   {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
+    canActivate: [GuestGuard],
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent,
+    canActivate: [GuestGuard],
+  },
+  {
     path: 'access-denied',
     component: AccessDeniedComponent,
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'app/dashboard',
     pathMatch: 'full',
   },
   {
     path: 'app',
     component: AppLayoutComponent,
-    canActivate: [AuthGuard],
     children: [
       {
         path: 'app',
@@ -66,7 +77,6 @@ export const routes: Routes = [
             IRoleType.user
           ],
           name: 'Dashboard',
-          showInSidebar: true
         }
       },
       {
