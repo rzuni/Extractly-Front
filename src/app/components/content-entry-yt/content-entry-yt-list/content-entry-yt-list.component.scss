@@ -1,0 +1,98 @@
+@import '../../../../assets/utils/variables';
+
+.content-entry-yt-list {
+  background-color: $background-color;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 2px;
+  border-color: white;
+
+  .entry-card {
+    background-color: $background-color;
+    padding: 1.5rem;
+    border-radius: $card-border-radious;
+    box-shadow: $card-box-shadow;
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-family: $primary-text;
+        font-size: 1.25rem;
+        color: white;
+      }
+
+      span {
+        font-size: 0.875rem;
+        color: $background-color;
+        font-weight: bold;
+      }
+    }
+
+    .entry-content {
+      margin-top: 1rem;
+      font-family: $normal-text;
+      color: $theme-body-font-color;
+    }
+
+    .entry-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: $btn-padding;
+        font-size: $btn-font-size;
+        border-radius: $form-control-border-radious;
+        border: none;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $primary-color;
+          color: $white;
+        }
+
+        &:last-child {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+  .entry-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+
+  button {
+    padding: $btn-padding;
+    font-size: $btn-font-size;
+    border-radius: $form-control-border-radious;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:first-child {
+      background-color: $primary-color;
+      color: $white;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    &:last-child {
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        background-color: lighten($black, 10%);
+      }
+    }
+  }
+}
+
+}

@@ -6,6 +6,8 @@ export const GuestGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
 
+  console.log('GuestGuard', route.url);
+
   if (!authService.check()) return true;
 
   router.navigateByUrl('/app/dashboard');
