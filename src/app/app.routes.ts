@@ -10,6 +10,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GuestGuard } from './guards/guest.guard';
 import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { PdfUploaderComponent } from './pages/pdfCreation/pdf-uploader';
+import { PptxUploaderComponent } from './pages/pptxUploader/pptxUploader.component';
 import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.component';
 import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
 import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
@@ -102,6 +104,32 @@ export const routes: Routes = [
           ],
           name: 'contentEntry',
           showInSidebar: false
+        }
+      },
+      {
+        path: 'pdf-summary',
+        component: PdfUploaderComponent,
+        data: { 
+          authorities: [
+            IRoleType.admin, 
+            IRoleType.superAdmin,
+            IRoleType.user,
+          ],
+          name: 'Resumen de PDF',
+          showInSidebar: true
+        }
+      },
+      {
+        path: 'pptx-summary',
+        component: PptxUploaderComponent,
+        data: { 
+          authorities: [
+            IRoleType.admin, 
+            IRoleType.superAdmin,
+            IRoleType.user,
+          ],
+          name: 'Resumen de PPTX',
+          showInSidebar: true
         }
       }
     ],
