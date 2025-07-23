@@ -1,4 +1,5 @@
 
+
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { AppLayoutComponent } from './components/app-layout/app-layout.component';
@@ -16,6 +17,7 @@ import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.co
 import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
 import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
 
 
 export const routes: Routes = [
@@ -68,6 +70,19 @@ export const routes: Routes = [
           ],
           name: 'Users',
           showInSidebar: true
+        }
+      },
+      {
+
+        path: 'dashboard',
+        component: DashboardComponent,
+        data: {
+          authorities: [
+            IRoleType.admin,
+            IRoleType.superAdmin,
+            IRoleType.user
+          ],
+          name: 'Dashboard',
         }
       },
       {
