@@ -1,6 +1,5 @@
 @import '../../../assets/utils/variables.scss';
 
-// Sección Hero
 .hero {
   background-color: $background-color;
   color: $color-text;
@@ -34,15 +33,13 @@
   }
 }
 
-// Sección general
 section {
   background-color: $background-color;
   color: $color-text;
 }
 
-// Equipo
 .team {
-  padding: 3rem 0;
+
 
   .d-flex {
     background-color: $card-body-color;
@@ -88,8 +85,6 @@ section {
     }
   }
 }
-
-// Contacto
 .contact {
   padding: 3rem 0;
 
@@ -123,7 +118,6 @@ section {
   }
 }
 
-// Herramientas
 .tools {
   background-color: lighten($background-color, 4%);
   padding: 3rem 0;
@@ -162,22 +156,6 @@ section {
     &:hover {
       background-color: $primary-color;
       color: $background-color;
-    }
-  }
-}
-
-// Footer
-footer {
-  background-color: $background-color;
-  color: $light-text;
-  border-top: 1px solid $card-border-color;
-
-  a {
-    color: $secondary-color;
-
-    &:hover {
-      color: $primary-color;
-      text-decoration: underline;
     }
   }
 }
