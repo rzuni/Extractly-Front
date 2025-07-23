@@ -24,6 +24,6 @@ export class AppLayoutComponent {
   public title?: string;
 
   constructor(public layoutService: LayoutService) {
-    this.layoutService.title.subscribe((title) => (this.title = title));
+    // this.layoutService.title.subscribe((title) => (this.title = title));
   }
 }

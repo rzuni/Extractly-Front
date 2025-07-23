@@ -1,7 +1,7 @@
 @import '../../../../assets/utils/variables';
 
 .content-entry-yt-form {
-  background-color: $color-text;
+  background-color: $background-color;
   padding: 2rem;
   border-radius: $card-border-radious;
   box-shadow: $card-box-shadow;
@@ -11,13 +11,13 @@
 
   h2 {
     font-family: $primary-text;
-    font-size: 1.75rem;
-    color: $theme-font-color;
+    font-size: 1.75rem; 
+    color: white;
     margin-bottom: 0.5rem;
   }
 
   p {
-    color: $theme-body-sub-title-color;
+    color: white;
     margin-bottom: 2rem;
   }
 
@@ -34,7 +34,7 @@
       label {
         font-weight: 600;
         margin-bottom: 0.5rem;
-        color: $theme-body-font-color;
+        color: white;
       }
 
       input[type="file"],
@@ -42,9 +42,9 @@
         padding: 0.5rem;
         font-size: $form-control-font-size;
         border-radius: $form-control-border-radious;
-        border: 1px solid $card-border-color;
-        background-color: $form-input-bg-color;
-        color: $theme-font-color;
+        border: 2px solid $card-border-color;
+        background-color: $background-color;
+        color: $white;
       }
 
       small {
@@ -107,7 +107,7 @@
       cursor: pointer;
 
       &.clear {
-        background-color: $white;
+        background-color: $background-color;
         border: 1px solid $primary-color;
         color: $primary-color;
       }
@@ -118,4 +118,25 @@
       }
     }
   }
+.archivo {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $background-color;
+  }
+}
+
+
 }

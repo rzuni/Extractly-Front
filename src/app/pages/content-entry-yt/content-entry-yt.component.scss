@@ -1,7 +1,7 @@
 @import '../../../assets/utils/variables';
 
 .content-entry-yt-page {
-  background-color: $main-body-color;
+  background-color: $background-color;
   min-height: 100vh;
   padding: 2rem;
 
@@ -11,7 +11,7 @@
 
     h1 {
       font-family: $primary-text;
-      color: $theme-font-color;
+      color: white;
       font-size: 2rem;
 
       strong {
@@ -21,7 +21,7 @@
 
     p {
       font-family: $normal-text;
-      color: $theme-body-sub-title-color;
+      color: white;
       font-size: 1rem;
       margin-top: 0.5rem;
     }

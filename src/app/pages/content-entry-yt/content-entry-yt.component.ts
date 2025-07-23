@@ -17,8 +17,8 @@ import { computeMsgId } from '@angular/compiler';
     NavbarComponent,
     FooterComponent
   ],
-  templateUrl: './content-entry-yt.page.html',
-  styleUrls: ['./content-entry-yt.page.scss']
+  templateUrl: './content-entry-yt.component.html',
+  styleUrls: ['./content-entry-yt.component.scss']
 })
 export class ContentEntryYtPage {
   public itemList: IContentEntryYt[] = [];

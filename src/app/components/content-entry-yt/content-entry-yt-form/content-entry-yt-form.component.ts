@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IContentEntryYt } from '../../../interfaces/index';
-import { NavbarComponent } from '../../app-layout/elements/navbar/navbar.component';
-import { FooterComponent } from '../../app-layout/elements/footer/footer.component';
 
 @Component({
   selector: 'app-content-entry-yt-form',
@@ -26,15 +24,28 @@ export class ContentEntryYtFormComponent {
 
   submitForm() {
     const finalData: IContentEntryYt = {
-  ...this.formData,
-  language: this.selectedLanguage
-};
-
+      ...this.formData,
+      language: this.selectedLanguage
+    };
     this.onSubmit.emit(finalData);
   }
 
   clearFields() {
     this.formData = {};
     this.selectedLanguage = undefined;
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+      this.formData.fileUrl = URL.createObjectURL(file);
+      this.formData.type = 'archivo';
+      this.formData.source = file.name;
+    }
+  }
+
+  get isFileValid(): boolean {
+    return !!this.formData.fileUrl || !!this.formData.source;
   }
 }

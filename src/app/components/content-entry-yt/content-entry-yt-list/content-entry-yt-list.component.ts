@@ -31,10 +31,6 @@ export class ContentEntryYtListComponent implements OnChanges {
     }
   }
 
-  showDetailModal(item: IContentEntryYt, modal: any) {
-    this.selectedItem = { ...item };
-    modal.show();
-  }
 
   onFormEventCalled(params: IContentEntryYt) {
     this.entryService.update(params);
@@ -43,5 +39,17 @@ export class ContentEntryYtListComponent implements OnChanges {
 
   deleteEntry(entry: IContentEntryYt) {
     this.entryService.delete(entry);
+  }
+  openEditModal(entry: IContentEntryYt) {
+  const modalRef = this.modalService.open(ModalComponent, { size: 'lg' });
+  modalRef.componentInstance.title = 'Editar Contenido';
+  modalRef.componentInstance.bodyComponent = ContentEntryYtFormComponent;
+  modalRef.componentInstance.bodyInput = entry;
+  modalRef.componentInstance.onSubmit.subscribe((updatedEntry: IContentEntryYt) => {
+    this.onFormEventCalled(updatedEntry);
+  });
+  }
+  addEntry(newEntry: IContentEntryYt) {
+    this.itemList.push(newEntry);
   }
 }

@@ -12,7 +12,7 @@ import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { GamesComponent } from './pages/games/games.component';
 import { OrdersComponent } from './pages/orders/orders.component';
-import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.page';
+import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.component';
 
 export const routes: Routes = [
   {
@@ -47,10 +47,10 @@ export const routes: Routes = [
       {
         path: 'users',
         component: UsersComponent,
-        canActivate:[AdminRoleGuard],
-        data: { 
+        canActivate: [AdminRoleGuard],
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin
           ],
           name: 'Users',
@@ -60,9 +60,9 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user
           ],
@@ -73,9 +73,9 @@ export const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user
           ],
@@ -86,9 +86,9 @@ export const routes: Routes = [
       {
         path: 'games',
         component: GamesComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user,
           ],
@@ -99,9 +99,9 @@ export const routes: Routes = [
       {
         path: 'orders',
         component: OrdersComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user,
           ],
@@ -110,8 +110,17 @@ export const routes: Routes = [
         }
       },
       {
-      path: 'content-entry-yt',
-      component: ContentEntryYtPage
+        path: 'content-entry-yt',
+        component: ContentEntryYtPage,
+        data: {
+          authorities: [
+            IRoleType.admin,
+            IRoleType.superAdmin,
+            IRoleType.user,
+          ],
+          name: 'contentEntry',
+          showInSidebar: false
+        }
       }
     ],
   },

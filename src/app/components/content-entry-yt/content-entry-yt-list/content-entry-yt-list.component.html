@@ -2,24 +2,25 @@
   <div *ngFor="let item of itemList" class="entry-card">
     <div class="entry-header">
       <h3>{{ item.title || 'Entrada sin título' }}</h3>
-      <span>{{ item.language?.toUpperCase() }}</span>
     </div>
 
     <div class="entry-content">
       <p>Tipo: {{ item.type }}</p>
       <p>Fuente: {{ item.source }}</p>
+
+      <!-- Mostrar video si tiene fileUrl -->
+      <video *ngIf="item.fileUrl" width="320" height="240" controls>
+        <source [src]="item.fileUrl" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
     </div>
 
+    <!-- Botones de acción -->
     <div *ngIf="areActionsAvailable" class="entry-actions">
-      <button (click)="showDetailModal(item, modal)">Editar</button>
-      <button (click)="deleteEntry(item)">Eliminar</button>
+      <!-- Mostrar solo eliminar si es video -->
+      <button *ngIf="item.fileUrl" (click)="deleteEntry(item)">
+        🗑️ Eliminar
+      </button>
     </div>
   </div>
-
-  <app-modal #modal>
-    <app-content-entry-yt-form
-      [formData]="selectedItem"
-      (onSubmit)="onFormEventCalled($event)">
-    </app-content-entry-yt-form>
-  </app-modal>
 </div>

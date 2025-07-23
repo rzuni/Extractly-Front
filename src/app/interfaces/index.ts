@@ -79,4 +79,5 @@ export interface IContentEntryYt {
   type?: 'archivo' | 'enlace';
   source?: string;
   language?: 'es' | 'en';
+  fileUrl?: string;
 }
