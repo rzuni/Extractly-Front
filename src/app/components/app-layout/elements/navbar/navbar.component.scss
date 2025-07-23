@@ -5,6 +5,7 @@ header {
   top: 0;
   z-index: 999;
   background-color: #111;
+
   padding: 0.5rem 0;
 
   .container {
@@ -42,7 +43,9 @@ header {
 
     a {
       font-family: $secondary-text;
+
       color: $color-text;
+
       font-size: 1.1rem;
       text-decoration: none;
       transition: color 0.3s ease;
@@ -76,6 +79,7 @@ header {
         background-color: transparent;
         color: $color-text;
         border: 1px solid $color-text;
+
 
         &:hover {
           background-color: $primary-color;
@@ -142,3 +146,4 @@ header {
     }
   }
 }
+

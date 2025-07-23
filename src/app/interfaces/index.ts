@@ -80,4 +80,15 @@ export interface IContentEntryYt {
   source?: string;
   language?: 'es' | 'en';
   fileUrl?: string;
+
+
+export interface IForgotPasswordRequest{
+  email: string;
+}
+
+export interface IResetPassword {
+  token: string;
+  newPassword: string;
+  confirmPassword: string;
+
 }

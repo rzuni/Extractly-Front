@@ -110,7 +110,9 @@
   z-index: 8;
   background-color: $color-text;
   transition: all linear 0.3s;
-  // @extend %for-animated-hover;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
   li {
     a {
@@ -125,6 +127,8 @@
     }
   }
 }
+
+
 
 /**======Main Header css Ends ======**/
 

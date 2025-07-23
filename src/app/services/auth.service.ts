@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { IAuthority, ILoginResponse, IResponse, IRoleType, IUser } from '../interfaces';
+import { IAuthority, IForgotPasswordRequest, ILoginResponse, IResetPassword, IResponse, IRoleType, IUser } from '../interfaces';
 import { Observable, firstValueFrom, of, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -123,5 +123,15 @@ export class AuthService {
       isAdmin = userAuthorities?.some(item => item.authority == IRoleType.admin || item.authority == IRoleType.superAdmin);
     }          
     return allowedUser && isAdmin;
+  }
+
+  forgotPassword(email: string): Observable<any> {
+    const requestBody: IForgotPasswordRequest = {email: email};
+    return this.http.post('auth/forgot-password', requestBody);
+  }
+
+  resetPassword(token: string, newPassword: string, confirmPassword: string): Observable<any> {
+    const requestBody: IResetPassword = { token, newPassword, confirmPassword};
+    return this.http.post('auth/reset-password', requestBody);
   }
 }

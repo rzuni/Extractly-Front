@@ -13,7 +13,6 @@ import { IUser } from '../../../../interfaces';
     CommonModule,
     RouterLink,
     MyAccountComponent,
-    
 ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
