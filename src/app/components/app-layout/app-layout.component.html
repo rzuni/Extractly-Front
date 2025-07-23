@@ -1,6 +1,33 @@
+
+<div class="container-fluid ">
+  <div class="page-wrapper compact-wrapper">
+
+    <div class="page-body-wrapper">
+      <div
+        class="sidebar-wrapper"
+        sidebar-layout="default-sidebar"
+        icon="stroke-svg"
+        [ngClass]="{ close_icon: !layoutService.sidebarOpen }">
+      </div>
+
+      <div class="page-body">
+
+
+        <main class="container-fluid ">
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
 <app-navbar></app-navbar>
 <div>
   <router-outlet />
 </div>
 
 <app-footer></app-footer>
+

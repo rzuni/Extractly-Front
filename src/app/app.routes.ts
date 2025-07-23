@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { AppLayoutComponent } from './components/app-layout/app-layout.component';
@@ -6,7 +7,6 @@ import { UsersComponent } from './pages/users/users.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AccessDeniedComponent } from './pages/access-denied/access-denied.component';
 import { AdminRoleGuard } from './guards/admin-role.guard';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GuestGuard } from './guards/guest.guard';
 import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -15,6 +15,7 @@ import { PptxUploaderComponent } from './pages/pptxUploader/pptxUploader.compone
 import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.component';
 import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
 import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
+
 
 export const routes: Routes = [
   {
@@ -69,6 +70,7 @@ export const routes: Routes = [
         }
       },
       {
+
         path: 'dashboard',
         component: DashboardComponent,
         data: {
@@ -94,6 +96,12 @@ export const routes: Routes = [
         }
       },
       {
+
+      path: 'equipo',
+      loadComponent: () =>
+      import('./pages/team-landing/team-landing.component').then(m => m.TeamLandingComponent)
+      } 
+
         path: 'content-entry-yt',
         component: ContentEntryYtPage,
         data: {

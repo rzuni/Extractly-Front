@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './elements/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../services/layout.service';
 import { FooterComponent } from './elements/footer/footer.component';

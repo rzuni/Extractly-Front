@@ -1,0 +1,161 @@
+@import '../../../assets/utils/variables.scss';
+
+.hero {
+  background-color: $background-color;
+  color: $color-text;
+  font-family: $primary-text;
+  padding: 3rem 0;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    color: $light-text;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .btn-outline-light {
+    border-color: $color-text;
+    color: $color-text;
+
+    &:hover {
+      background-color: $color-text;
+      color: $background-color;
+    }
+  }
+}
+
+section {
+  background-color: $background-color;
+  color: $color-text;
+}
+
+.team {
+
+
+  .d-flex {
+    background-color: $card-body-color;
+    border: 1px solid $card-body-color;
+    box-shadow: 0 0 10px $card-body-color;
+  }
+
+  h3 {
+    font-family: $secondary-text;
+    color: $color-text;
+  }
+
+  p {
+    font-family: $normal-text;
+    color: $light-text;
+    font-size: 0.95rem;
+  }
+
+  .badge {
+    background-color: $secondary-color;
+    font-size: 0.75rem;
+    color: $background-color;
+  }
+
+  .btn-outline-dark {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background: transparent;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $background-color;
+    }
+  }
+
+  .btn-dark {
+    background-color: $primary-color;
+    border: none;
+    color: $background-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+.contact {
+  padding: 3rem 0;
+
+  h3 {
+    font-family: $secondary-text;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  p {
+    color: $light-text;
+  }
+
+  .form-control {
+    background-color: lighten($background-color, 3%);
+    border: 1px solid $primary-color;
+    color: $color-text;
+
+    &::placeholder {
+      color: $light-text;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border: none;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.tools {
+  background-color: lighten($background-color, 4%);
+  padding: 3rem 0;
+
+  h3 {
+    font-family: $secondary-text;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  .card {
+    background-color: $card-body-color;
+    border-color: $card-border-color;
+    box-shadow: 0 0 10px rgba($black, 0.1);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-title {
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .text-muted {
+      font-size: 0.8rem;
+      color: $light-text !important;
+    }
+  }
+
+  .btn-outline-dark {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $background-color;
+    }
+  }
+}
