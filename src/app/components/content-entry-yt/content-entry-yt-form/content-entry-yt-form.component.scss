@@ -1,0 +1,142 @@
+@import '../../../../assets/utils/variables';
+
+.content-entry-yt-form {
+  background-color: $background-color;
+  padding: 2rem;
+  border-radius: $card-border-radious;
+  box-shadow: $card-box-shadow;
+  font-family: $normal-text;
+  max-width: 700px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: $primary-text;
+    font-size: 1.75rem; 
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .form-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: white;
+      }
+
+      input[type="file"],
+      input[type="text"] {
+        padding: 0.5rem;
+        font-size: $form-control-font-size;
+        border-radius: $form-control-border-radious;
+        border: 2px solid $card-border-color;
+        background-color: $background-color;
+        color: $white;
+      }
+
+      small {
+        font-size: 12px;
+        color: $light-text;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  .language-select {
+    margin-top: 2rem;
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $theme-body-font-color;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border: 1px solid $card-border-color;
+        background-color: $white;
+        color: $theme-font-color;
+        cursor: pointer;
+        border-radius: $form-control-border-radious;
+        font-weight: 600;
+
+        &.active {
+          background-color: $primary-color;
+          color: $white;
+        }
+      }
+    }
+
+    small {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 12px;
+      color: $light-text;
+    }
+  }
+
+  .action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+
+    button {
+      padding: $btn-padding;
+      font-size: $btn-font-size;
+      border: none;
+      border-radius: $form-control-border-radious;
+      font-weight: bold;
+      cursor: pointer;
+
+      &.clear {
+        background-color: $background-color;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+      }
+
+      &.submit {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+.archivo {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $background-color;
+  }
+}
+
+
+}
