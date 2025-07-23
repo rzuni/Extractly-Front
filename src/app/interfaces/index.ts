@@ -81,6 +81,7 @@ export interface IContentEntryYt {
   language?: 'es' | 'en';
   fileUrl?: string;
 
+}
 
 export interface IForgotPasswordRequest{
   email: string;

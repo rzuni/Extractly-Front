@@ -6,7 +6,7 @@ import { ContentEntryYtFormComponent } from '../../components/content-entry-yt/c
 import { ContentEntryYtListComponent } from '../../components/content-entry-yt/content-entry-yt-list/content-entry-yt-list.component';
 import { NavbarComponent } from '../../components/app-layout/elements/navbar/navbar.component';
 import { FooterComponent } from '../../components/app-layout/elements/footer/footer.component';
-import { computeMsgId } from '@angular/compiler';
+
 @Component({
   selector: 'app-content-entry-yt',
   standalone: true,
@@ -22,9 +22,8 @@ import { computeMsgId } from '@angular/compiler';
 })
 export class ContentEntryYtPage {
   public itemList: IContentEntryYt[] = [];
-  private entryService = new ContentEntryYtService();
 
-  constructor() {
+  constructor(private entryService: ContentEntryYtService) {
     this.itemList = this.entryService.getAll();
   }
 

@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './elements/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../services/layout.service';
-import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 import { FooterComponent } from './elements/footer/footer.component';
 
 
@@ -16,7 +15,6 @@ import { FooterComponent } from './elements/footer/footer.component';
     CommonModule,
     RouterOutlet,
     NavbarComponent,
-    SvgIconComponent,
     FooterComponent
   ],
 })
