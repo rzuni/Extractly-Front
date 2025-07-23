@@ -62,16 +62,10 @@ footer {
         li {
           margin-bottom: 0.5rem;
 
-          a {
-            text-decoration: none;
-            color: lighten($color-text, 20%);
-            font-family: $normal-text;
-            font-size: 0.95rem;
-
             &:hover {
               color: $primary-color;
             }
-          }
+          
         }
       }
 

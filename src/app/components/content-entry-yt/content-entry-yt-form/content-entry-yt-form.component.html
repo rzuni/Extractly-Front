@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <!-- <div class="language-select">
+  <!-- <div class="language-select">                    
     <label>Selector de Idioma</label>
     <div class="buttons">
       <button [class.active]="selectedLanguage === 'es'" (click)="setLanguage('es')">Español</button>
@@ -30,5 +30,7 @@
   <div class="action-buttons">
     <button class="clear" (click)="clearFields()">Limpiar Campos</button>
     <button class="submit"[disabled]="!isFileValid"(click)="submitForm()">Procesar Contenido</button>
-
+    <a *ngIf="downloadUrl" [href]="downloadUrl" download="resumen_youtube.pdf" class="btn btn-success mt-2">
+      Descargar PDF
+    </a>
   </div>

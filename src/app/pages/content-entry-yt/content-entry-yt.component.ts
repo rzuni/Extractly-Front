@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IContentEntryYt } from '../../interfaces/index';
+import { IContentEntryYt } from '../../interfaces';
 import { ContentEntryYtService } from '../../services/ContentEntryYtService';
 import { ContentEntryYtFormComponent } from '../../components/content-entry-yt/content-entry-yt-form/content-entry-yt-form.component';
 import { ContentEntryYtListComponent } from '../../components/content-entry-yt/content-entry-yt-list/content-entry-yt-list.component';
@@ -23,7 +23,9 @@ import { FooterComponent } from '../../components/app-layout/elements/footer/foo
 export class ContentEntryYtPage {
   public itemList: IContentEntryYt[] = [];
 
-  constructor(private entryService: ContentEntryYtService) {
+  private entryService = inject(ContentEntryYtService);
+
+  constructor() {
     this.itemList = this.entryService.getAll();
   }
 

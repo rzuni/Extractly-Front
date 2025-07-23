@@ -29,6 +29,20 @@ export class ContentEntryYtService {
     this.items = this.items.filter(e => e.id !== entry.id);
   }
 
+  /**
+   * Método NUEVO que sigue la misma arquitectura de PdfUploaderComponent
+   * Realiza un POST con FormData para subir un enlace de YouTube y recibir un PDF resumido.
+   */
+  uploadYoutubeUrl(formData: FormData): Observable<Blob> {
+    const uploadUrl = 'http://localhost:8080/api/google-cloud/gemini/yt-to-summary-pdf';
+    return this.http.post(uploadUrl, formData, {
+      responseType: 'blob'
+    });
+  }
+
+  /**
+   * Método anterior (opcional), aún disponible si querés usar GET con query params
+   */
   downloadYoutubePdf(youtubeUrl: string, language: string = 'es-ES'): Observable<Blob> {
     return this.http.get(`/api/youtube/resumen/pdf`, {
       params: { youtubeUrl, languageCode: language },
