@@ -1,0 +1,17 @@
+
+<section class="content-entry-yt-page">
+  <div class="hero">
+    <h1>Bienvenido al Módulo de <strong>Entrada de Contenido</strong></h1>
+    <p>Ingresa archivos o enlaces para procesar fácilmente.</p>
+  </div>
+
+  <app-content-entry-yt-form
+  (onSubmit)="addEntry($event)">
+</app-content-entry-yt-form>
+
+  <app-content-entry-yt-list
+    [itemList]="itemList"
+    [areActionsAvailable]="true">
+  </app-content-entry-yt-list>
+</section>
+

@@ -324,7 +324,7 @@ html[dir="rtl"] {
                 margin-left: unset;
                 margin-right: 5px;
                 border-left: unset;
-                border-right: 1px solid $light-color;
+                // border-right: 1px solid $light-color;
               }
             }
           }
@@ -733,15 +733,15 @@ html[dir="rtl"] {
   // index page css end
   @each $progress-gradient-name,
     $progress-gradient-color in (primary, var(--theme-default)),
-    (secondary, $secondary-color), (success, $success-color),
-    (danger, $danger-color), (info, $info-color), (light, $light-color),
-    (dark, $dark-color), (warning, $warning-color)
+    // (secondary, $secondary-color), (success, $success-color),
+    // (danger, $danger-color), (info, $info-color), (light, $light-color),
+    // (dark, $dark-color), (warning, $warning-color)
   {
     .progress-gradient-#{$progress-gradient-name} {
       background-image: linear-gradient(
         to right,
-        $progress-gradient-color,
-        $transparent-color
+        // $progress-gradient-color,
+        // $transparent-color
       );
       &::after {
         right: unset;
@@ -1164,7 +1164,7 @@ html[dir="rtl"] {
     padding-right: 1rem !important;
   }
   .b-r-light {
-    border-left: 1px solid $light-color !important;
+    // border-left: 1px solid $light-color !important;
     border-right: unset !important;
   }
   .float-end {
@@ -1266,7 +1266,7 @@ html[dir="rtl"] {
     margin-right: unset;
   }
   .b-l-light {
-    border-right: 1px solid $light-color !important;
+    // border-right: 1px solid $light-color !important;
     border-left: unset !important;
   }
   .p-l-0 {
@@ -1505,7 +1505,7 @@ html[dir="rtl"] {
       &:after {
         left: 100%;
         right: unset;
-        border-left: 7px solid $white;
+        border-left: 7px solid $color-text;
         border-right: unset;
       }
     }
@@ -2028,7 +2028,7 @@ html[dir="rtl"] {
               border-bottom-right-radius: 0 !important;
             }
             #appendedcheckbox {
-              border-right-color: $light-semi-gray;
+              // border-right-color: $light-semi-gray;
             }
             #buttondropdown {
               margin-right: unset;
@@ -2149,7 +2149,7 @@ html[dir="rtl"] {
                     border-bottom-right-radius: 0 !important;
                   }
                   #appendedcheckbox {
-                    border-right-color: $light-semi-gray;
+                    // border-right-color: $light-semi-gray;
                   }
                 }
               }
@@ -2179,7 +2179,7 @@ html[dir="rtl"] {
   .page-wrapper {
     .page-body-wrapper {
       .logo-wrapper {
-        box-shadow: 9px 0 20px rgba($semi-dark, 0.1) !important;
+        // box-shadow: 9px 0 20px rgba($semi-dark, 0.1) !important;
         a {
           transform: translate(-64px);
         }
@@ -2567,7 +2567,7 @@ html[dir="rtl"] {
         padding-left: 0;
         padding-right: 20px;
         &:first-child {
-          border-left: 1px solid $light-semi-gray;
+          // border-left: 1px solid $light-semi-gray;
           border-right: unset;
           padding-right: 0;
           padding-left: 20px;
@@ -2629,7 +2629,7 @@ html[dir="rtl"] {
       text-align: right;
     }
     .chat-menu {
-      border-right: 1px solid $light-color;
+      // border-right: 1px solid $light-color;
       border-left: unset;
       .nav {
         padding-right: 0;
@@ -2732,7 +2732,7 @@ html[dir="rtl"] {
     .card-footer {
       & > div {
         & + div {
-          border-right: 1px solid $light-semi-gray;
+          // border-right: 1px solid $light-semi-gray;
           border-left: unset !important;
         }
       }
@@ -3384,7 +3384,7 @@ html[dir="rtl"] {
   // timeline page
   .cd-timeline-content {
     &::before {
-      border-right: 7px solid $light-color;
+      // border-right: 7px solid $light-color;
       border-left-color: transparent;
     }
   }
@@ -3759,7 +3759,7 @@ html[dir="rtl"] {
       .card-footer {
         > div {
           + div {
-            border-right: 1px solid $dark-card-border;
+            // border-right: 1px solid $dark-card-border;
           }
         }
       }
@@ -3771,7 +3771,7 @@ html[dir="rtl"] {
             .b-r-light,
             .border-right {
               border-right: none !important;
-              border-left: 1px solid $dark-card-border !important;
+              // border-left: 1px solid $dark-card-border !important;
             }
           }
         }

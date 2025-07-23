@@ -73,3 +73,23 @@ export interface ISearch {
   totalElements?: number;
   totalPages?:number;
 }
+export interface IContentEntryYt {
+  id?: number;
+  title?: string;
+  type?: 'archivo' | 'enlace';
+  source?: string;
+  language?: 'es' | 'en';
+  fileUrl?: string;
+
+}
+
+export interface IForgotPasswordRequest{
+  email: string;
+}
+
+export interface IResetPassword {
+  token: string;
+  newPassword: string;
+  confirmPassword: string;
+
+}

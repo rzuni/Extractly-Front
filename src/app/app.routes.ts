@@ -10,10 +10,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { GuestGuard } from './guards/guest.guard';
 import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { GamesComponent } from './pages/games/games.component';
-import { OrdersComponent } from './pages/orders/orders.component';
 import { PdfUploaderComponent } from './pages/pdfCreation/pdf-uploader';
 import { PptxUploaderComponent } from './pages/pptxUploader/pptxUploader.component';
+import { ContentEntryYtPage } from './pages/content-entry-yt/content-entry-yt.component';
+import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
+import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
 
 export const routes: Routes = [
   {
@@ -27,18 +28,27 @@ export const routes: Routes = [
     canActivate: [GuestGuard],
   },
   {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
+    canActivate: [GuestGuard],
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent,
+    canActivate: [GuestGuard],
+  },
+  {
     path: 'access-denied',
     component: AccessDeniedComponent,
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'app/dashboard',
     pathMatch: 'full',
   },
   {
     path: 'app',
     component: AppLayoutComponent,
-    canActivate: [AuthGuard],
     children: [
       {
         path: 'app',
@@ -48,10 +58,10 @@ export const routes: Routes = [
       {
         path: 'users',
         component: UsersComponent,
-        canActivate:[AdminRoleGuard],
-        data: { 
+        canActivate: [AdminRoleGuard],
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin
           ],
           name: 'Users',
@@ -61,22 +71,21 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user
           ],
           name: 'Dashboard',
-          showInSidebar: true
         }
       },
       {
         path: 'profile',
         component: ProfileComponent,
-        data: { 
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user
           ],
@@ -85,29 +94,16 @@ export const routes: Routes = [
         }
       },
       {
-        path: 'games',
-        component: GamesComponent,
-        data: { 
+        path: 'content-entry-yt',
+        component: ContentEntryYtPage,
+        data: {
           authorities: [
-            IRoleType.admin, 
+            IRoleType.admin,
             IRoleType.superAdmin,
             IRoleType.user,
           ],
-          name: 'games',
-          showInSidebar: true
-        }
-      },
-      {
-        path: 'orders',
-        component: OrdersComponent,
-        data: { 
-          authorities: [
-            IRoleType.admin, 
-            IRoleType.superAdmin,
-            IRoleType.user,
-          ],
-          name: 'orders',
-          showInSidebar: true
+          name: 'contentEntry',
+          showInSidebar: false
         }
       },
       {

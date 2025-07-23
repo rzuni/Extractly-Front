@@ -15,6 +15,8 @@ import { IUser } from '../../../interfaces';
 export class SigUpComponent {
   public signUpError!: String;
   public validSignup!: boolean;
+  public showPassword: boolean = false;
+
   @ViewChild('name') nameModel!: NgModel;
   @ViewChild('lastname') lastnameModel!: NgModel;
   @ViewChild('email') emailModel!: NgModel;
@@ -47,4 +49,10 @@ export class SigUpComponent {
       });
     }
   }
+
+    public togglePasswordVisibility(): void { 
+    this.showPassword = !this.showPassword;
+  }
+
+  public signInWithGoogle(){}
 }
