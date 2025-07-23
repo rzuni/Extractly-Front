@@ -12,6 +12,8 @@ import { IRoleType } from './interfaces';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { GamesComponent } from './pages/games/games.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { PdfUploaderComponent } from './pages/pdfCreation/pdf-uploader';
+import { PptxUploaderComponent } from './pages/pptxUploader/pptxUploader.component';
 
 export const routes: Routes = [
   {
@@ -103,6 +105,32 @@ export const routes: Routes = [
             IRoleType.user,
           ],
           name: 'orders',
+          showInSidebar: true
+        }
+      },
+      {
+        path: 'pdf-summary',
+        component: PdfUploaderComponent,
+        data: { 
+          authorities: [
+            IRoleType.admin, 
+            IRoleType.superAdmin,
+            IRoleType.user,
+          ],
+          name: 'Resumen de PDF',
+          showInSidebar: true
+        }
+      },
+      {
+        path: 'pptx-summary',
+        component: PptxUploaderComponent,
+        data: { 
+          authorities: [
+            IRoleType.admin, 
+            IRoleType.superAdmin,
+            IRoleType.user,
+          ],
+          name: 'Resumen de PPTX',
           showInSidebar: true
         }
       }
