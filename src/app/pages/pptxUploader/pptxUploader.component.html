@@ -1,20 +1,31 @@
-<div class="pptx-uploader-container">
-  <h2>Generar Presentación PPTX de Resumen con Gemini</h2>
-
-  <input type="file" (change)="onFileSelected($event)" accept="application/pdf">
-
-  <div class="form-group">
-    <label for="customPrompt">Prompt Personalizado (Opcional):</label>
-    <textarea id="customPrompt" [(ngModel)]="customPrompt" rows="3" placeholder="Ej: 'Genera un resumen breve y conciso sobre...'"></textarea>
+<section class="pptx-uploader-page">
+  <div class="hero">
+    <h1>Bienvenido al Generador de <strong>Presentaciones PPTX</strong></h1>
+    <p>Sube un archivo PDF y obtén un resumen en formato de presentación.</p>
   </div>
 
-  <button (click)="uploadPdfAndGeneratePptx()" [disabled]="!selectedFile || isLoading">
-    {{ isLoading ? 'Generando PPTX...' : 'Subir PDF y Generar PPTX' }}
-  </button>
+  <div class="pptx-uploader-container">
+    <h2>Generar Presentación PPTX de Resumen con Gemini</h2>
 
-  <div *ngIf="message" [class]="isError ? 'error-message' : 'success-message'">
-    {{ message }}
+    <!-- Campo de carga oculto y label personalizado -->
+    <input type="file" id="fileUploadPptx" class="archivo" accept="application/pdf" (change)="onFileSelected($event)" />
+    <label for="fileUploadPptx" class="custom-file-upload">Seleccionar archivo PDF</label>
+
+    <div class="form-group">
+      <label for="customPrompt">Prompt Personalizado (Opcional):</label>
+      <textarea class="text" id="customPrompt" [(ngModel)]="customPrompt" rows="3" placeholder="Ej: 'Genera un resumen breve y conciso sobre...'"></textarea>
+    </div>
+
+    <button class="submit" (click)="uploadPdfAndGeneratePptx()" [disabled]="!selectedFile || isLoading">
+      {{ isLoading ? 'Generando PPTX...' : 'Subir PDF y Generar PPTX' }}
+    </button>
+
+    <div *ngIf="message" [class]="isError ? 'error-message' : 'success-message'">
+      {{ message }}
+    </div>
+
+    <a *ngIf="downloadUrl" [href]="downloadUrl" download="resumen_gemini.pptx">
+      Descargar Resumen PPTX
+    </a>
   </div>
-
-  <a *ngIf="downloadUrl" [href]="downloadUrl" download="resumen_gemini.pptx">Descargar Resumen PPTX</a>
-</div>
+</section>

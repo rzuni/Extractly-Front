@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutService } from '../../services/layout.service';
 import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 import { FooterComponent } from './elements/footer/footer.component';
-
+import { NavbarComponent } from './elements/navbar/navbar.component';
 
 @Component({
   selector: 'app-layout',

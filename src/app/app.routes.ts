@@ -139,7 +139,7 @@ export const routes: Routes = [
             IRoleType.user,
           ],
           name: 'Resumen de PDF',
-          showInSidebar: true
+          showInSidebar: false
         }
       },
       {
@@ -152,7 +152,7 @@ export const routes: Routes = [
             IRoleType.user,
           ],
           name: 'Resumen de PPTX',
-          showInSidebar: true
+          showInSidebar: false
         }
       }
     ],

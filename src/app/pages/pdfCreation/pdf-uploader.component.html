@@ -1,20 +1,31 @@
-<div class="pdf-uploader-container">
-  <h2>Generar Resumen de PDF con Gemini</h2>
-
-  <input type="file" (change)="onFileSelected($event)" accept="application/pdf">
-
-  <div class="form-group">
-    <label for="customPrompt">Prompt Personalizado (Opcional):</label>
-    <textarea id="customPrompt" [(ngModel)]="customPrompt" rows="3" placeholder="Ej: 'Genera un resumen breve y conciso sobre...'"></textarea>
+<section class="pdf-uploader-page">
+  <div class="hero">
+    <h1>Bienvenido al Resumen de <strong>Documentos PDF</strong></h1>
+    <p>Sube un archivo PDF y obtén un resumen automático con Gemini.</p>
   </div>
 
-  <button (click)="uploadPdf()" [disabled]="!selectedFile || isLoading">
-    {{ isLoading ? 'Generando PDF...' : 'Subir PDF y Generar Resumen' }}
-  </button>
+  <div class="pdf-uploader-container">
+    <h2>Generar Resumen de PDF con Gemini</h2>
 
-  <div *ngIf="message" [class]="isError ? 'error-message' : 'success-message'">
-    {{ message }}
+    <!-- Campo de carga oculto y label personalizado -->
+    <input type="file" id="fileUpload" class="archivo" accept="application/pdf" (change)="onFileSelected($event)" />
+    <label for="fileUpload" class="custom-file-upload">Seleccionar archivo PDF</label>
+
+    <div class="form-group">
+      <label for="customPrompt">Prompt Personalizado (Opcional):</label>
+      <textarea class="text" id="customPrompt" [(ngModel)]="customPrompt" rows="3" placeholder="Ej: 'Genera un resumen breve y conciso sobre...'"></textarea>
+    </div>
+
+    <button class="submit" (click)="uploadPdf()" [disabled]="!selectedFile || isLoading">
+      {{ isLoading ? 'Generando PDF...' : 'Subir PDF y Generar Resumen' }}
+    </button>
+
+    <div *ngIf="message" [class]="isError ? 'error-message' : 'success-message'">
+      {{ message }}
+    </div>
+
+    <a *ngIf="downloadUrl" [href]="downloadUrl" download="resumen_gemini.pdf">
+      Descargar Resumen PDF
+    </a>
   </div>
-
-  <a *ngIf="downloadUrl" [href]="downloadUrl" download="resumen_gemini.pdf">Descargar Resumen PDF</a>
-</div>
+</section>

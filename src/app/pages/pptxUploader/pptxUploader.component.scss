@@ -1,90 +1,176 @@
-.pptx-uploader-container {
-  padding: 20px;
-  max-width: 600px;
-  margin: 50px auto;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
+@import '../../../assets/utils/variables';
 
-  h2 {
-    color: #333;
-    margin-bottom: 20px;
+.pptx-uploader-page {
+  background-color: $background-color;
+  min-height: 100vh;
+  padding: 2rem;
+
+  .hero {
     text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-family: $primary-text;
+      color: white;
+      font-size: 2rem;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      font-family: $normal-text;
+      color: $theme-body-sub-title-color;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
   }
 
-  input[type="file"] {
-    display: block;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  .pptx-uploader-container {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: $background-color;
 
-  .form-group {
-    margin-bottom: 15px;
-  }
+    h2 {
+      font-family: $primary-text;
+      color: $color-text;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
+    input[type="file"] {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
 
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
+    .form-group {
+      margin-bottom: 1rem;
+
+      label {
+        font-weight: 600;
+        color: $theme-body-sub-title-color;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        resize: vertical;
+        font-family: $normal-text;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+
+    .success-message,
+    .error-message {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .success-message {
+      color: green;
+    }
+
+    .error-message {
+      color: red;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
+}
+
+.archivo {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font: $normal-text;
+
+  &:hover {
+    background-color: $background-color;
+  }
+}
+
+.action-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
 
   button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
+    padding: $btn-padding;
+    font-size: $btn-font-size;
     border: none;
-    border-radius: 4px;
+    border-radius: $form-control-border-radious;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s ease;
 
-    &:hover:not(:disabled) {
-      background-color: #0056b3;
+    &.clear {
+      background-color: $background-color;
+      border: 1px solid $primary-color;
+      color: $primary-color;
     }
 
-    &:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
+    &.submit {
+      background-color: $black;
+      color: $white;
     }
   }
+}
 
-  .success-message {
-    color: green;
-    margin-top: 15px;
-    text-align: center;
-  }
+.text {
+  background-color: $background-color;
+  color: white;
+}
 
-  .error-message {
-    color: red;
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  a {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #007bff;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.submit {
+  background-color: $black;
+  color: $white;
 }

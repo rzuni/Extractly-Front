@@ -42,9 +42,7 @@ section {
 
 
   .d-flex {
-    background-color: $card-body-color;
-    border: 1px solid $card-body-color;
-    box-shadow: 0 0 10px $card-body-color;
+   
   }
 
   h3 {
@@ -129,9 +127,9 @@ section {
   }
 
   .card {
-    background-color: $card-body-color;
-    border-color: $card-border-color;
-    box-shadow: 0 0 10px rgba($black, 0.1);
+    background-color: $background-color;
+    border-color: $background-color;
+    box-shadow: 0 0 10px rgba($white, 0.1);
     transition: transform 0.2s;
 
     &:hover {
@@ -158,4 +156,7 @@ section {
       color: $background-color;
     }
   }
+}
+.bg_color{
+  background-color: $background-color;
 }
