@@ -56,13 +56,29 @@ export class AuthService {
     password: string;
   }): Observable<ILoginResponse> {
     return this.http.post<ILoginResponse>('auth/login', credentials).pipe(
-      tap((response: any) => {
-        this.accessToken = response.token;
-        this.user.email = credentials.email;
-        this.expiresIn = response.expiresIn;
-        this.user = response.authUser;
-        this.save();
-      })
+        tap((response: any) => {
+          this.accessToken = response.token;
+          this.user.email = credentials.email;
+          this.expiresIn = response.expiresIn;
+          this.user = response.authUser;
+          this.save();
+        })
+    );
+  }
+
+  loginWithEmailAndPassword(email: string, password: string): Observable<ILoginResponse> {
+    return this.login({ email, password });
+  }
+
+  sendGoogleTokenToBackend(idToken: string): Observable<ILoginResponse> {
+    const url = 'auth/google-login';
+    return this.http.post<ILoginResponse>(url, { token: idToken }).pipe(
+        tap((response: any) => {
+          this.accessToken = response.token;
+          this.user = response.authUser;
+          this.expiresIn = response.expiresIn;
+          this.save();
+        })
     );
   }
 
@@ -84,7 +100,7 @@ export class AuthService {
       if(route.data && route.data.authorities) {
         if (this.hasAnyRole(route.data.authorities)) {
           permittedRoutes.unshift(route);
-        } 
+        }
       }
     }
     return permittedRoutes;
@@ -106,22 +122,18 @@ export class AuthService {
   }
 
   public areActionsAvailable(routeAuthorities: string[]): boolean  {
-    // definición de las variables de validación
     let allowedUser: boolean = false;
     let isAdmin: boolean = false;
-    // se obtienen los permisos del usuario
     let userAuthorities = this.getUserAuthorities();
-    // se valida que sea una ruta permitida para el usuario
     for (const authority of routeAuthorities) {
       if (userAuthorities?.some(item => item.authority == authority) ) {
         allowedUser = userAuthorities?.some(item => item.authority == authority)
       }
       if (allowedUser) break;
     }
-    // se valida que el usuario tenga un rol de administración
     if (userAuthorities?.some(item => item.authority == IRoleType.admin || item.authority == IRoleType.superAdmin)) {
       isAdmin = userAuthorities?.some(item => item.authority == IRoleType.admin || item.authority == IRoleType.superAdmin);
-    }          
+    }
     return allowedUser && isAdmin;
   }
 }
