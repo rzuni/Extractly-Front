@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>File Save Example</h1>
+
+  <div class="form">
+    <input [(ngModel)]="newTitle" placeholder="Enter file title" />
+    <button (click)="addFile()">Save</button>
+  </div>
+
+  <app-file-list [files]="files"></app-file-list>
+</div>

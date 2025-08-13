@@ -2,6 +2,9 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
+
+
 
 @Component({
   selector: 'app-pptx-uploader', // Nuevo selector para tu componente
@@ -61,7 +64,7 @@ export class PptxUploaderComponent { // Nuevo nombre de clase para tu componente
     }
 
     // ¡IMPORTANTE! Ajusta esta URL a tu endpoint REAL de Spring Boot para generar PPTX desde un PDF
-    const uploadUrl = 'http://localhost:8080/api/google-cloud/gemini/pptx-summary/pdf-to-pptx'; 
+    const uploadUrl = `${environment.apiUrlpdf}`;
 
     this.http.post(uploadUrl, formData, {
       responseType: 'blob', // Esperamos una respuesta binaria (Blob)

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importa CommonModule para directivas como *ngIf
 import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule para [(ngModel)]
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-pdf-uploader',
@@ -56,16 +57,15 @@ export class PdfUploaderComponent {
     const formData = new FormData();
     formData.append('file', this.selectedFile, this.selectedFile.name);
 
-    // Si hay un prompt personalizado, añádelo al FormData
     if (this.customPrompt.trim()) {
       formData.append('customPrompt', this.customPrompt.trim());
     }
 
-    const uploadUrl = 'http://localhost:8080/api/google-cloud/gemini/pdf-to-summary-pdf';
+    const uploadUrl = `${environment.apiUrlpdf}`;
 
     this.http.post(uploadUrl, formData, {
-      responseType: 'blob', // Esperamos una respuesta binaria, PDF
-      observe: 'response' // Queremos la respuesta completa para acceder a los headers
+      responseType: 'blob', 
+      observe: 'response' 
     }).subscribe(
       (response: any) => {
         this.isLoading = false;
@@ -99,8 +99,7 @@ export class PdfUploaderComponent {
             this.message = errorMessage;
         } else {
             this.message = errorMessage;
-        }
-        console.error('Error al subir PDF:', error);
+        };
       }
     );
   }

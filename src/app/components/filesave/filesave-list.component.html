@@ -1,0 +1,17 @@
+<ul class="file-list">
+  <li *ngFor="let file of files" class="file-item">
+    <div class="file-header">
+      <strong>{{ file.userEmail || 'Sin usuario' }}</strong>
+      <span class="file-date">
+        {{ file.timestamp | date: 'short' }}
+      </span>
+    </div>
+    <div class="file-message">
+      {{ file.message }}
+    </div>
+  </li>
+</ul>
+
+<div *ngIf="!files || files.length === 0" class="no-data">
+  No hay historial disponible.
+</div>
