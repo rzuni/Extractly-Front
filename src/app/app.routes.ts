@@ -14,6 +14,7 @@ import { GamesComponent } from './pages/games/games.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 
 export const routes: Routes = [
+
   {
     path: 'login',
     component: LoginComponent,
