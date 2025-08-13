@@ -15,6 +15,7 @@ import { ContentEntryYtComponent } from './pages/content-entry-yt/content-entry-
 import { ForgotPasswordComponent } from './pages/forgotPassword/ForgotPassword.component';
 import { ResetPasswordComponent } from './pages/resetPassword/ResetPassword.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { YoutubePptxGeneratorComponent } from './pages/youtubePptx/youtubePptx.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [GuestGuard] },
@@ -84,6 +85,15 @@ export const routes: Routes = [
         data: {
           authorities: [IRoleType.admin, IRoleType.superAdmin, IRoleType.user],
           name: 'Resumen de PPTX',
+          showInSidebar: false
+        }
+      },
+      {
+        path: 'app-youtube-pptx-generator',
+        component: YoutubePptxGeneratorComponent,
+        data: {
+          authorities: [IRoleType.admin, IRoleType.superAdmin, IRoleType.user],
+          name: 'Resumen YT de PPTX',
           showInSidebar: false
         }
       },

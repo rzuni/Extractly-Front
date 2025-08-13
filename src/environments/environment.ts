@@ -4,5 +4,6 @@ export const environment = {
   apiUrlyt: 'http://localhost:8080/api/youtube/resumen/pdf',
   apiUrlpdf: 'http://localhost:8080/api/google-cloud/gemini/pdf-to-summary-pdf',
   apiUrlppt: 'http://localhost:8080/api/google-cloud/gemini/pdf-to-summary-ppt',
-  apiUrlfilesave: 'http://localhost:8080/api/filesave'
+  apiUrlfilesave: 'http://localhost:8080/api/filesave',
+  apiUrlytPptx: 'http://localhost:8080/api/youtube/create-pptx-from-url'
 };
