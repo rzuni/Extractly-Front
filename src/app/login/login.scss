@@ -1,0 +1,13 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--light-bg);
+}
+
+.card {
+  width: 400px;
+  background-color: var(--white);
+  border: 1px solid var(--sidebar-border);
+}
