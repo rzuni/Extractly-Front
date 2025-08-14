@@ -217,6 +217,19 @@
     background-color: $background-color;
   }
 }
+.success-message,
+  .error-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
 
+  .success-message {
+    color: green;
+  }
+
+  .error-message {
+    color: red;
+  }
 
 }

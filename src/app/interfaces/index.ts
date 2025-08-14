@@ -1,4 +1,5 @@
 export interface ILoginResponse {
+  token: string;
   accessToken: string;
   expiresIn: number
 }
@@ -47,22 +48,6 @@ export interface IRole {
   id: number;
   name : string;
   updatedAt: string;
-}
-
-export interface IGame {
-  id?: number;
-  name?: string;
-  imgURL?: string;
-  status?: string;
-  description?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-export interface IOrder {
-  id?: number;
-  description?: string;
-  total?: number;
 }
 
 export interface ISearch {

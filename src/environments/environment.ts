@@ -5,5 +5,6 @@ export const environment = {
   apiUrlpdf: 'http://localhost:8080/api/google-cloud/gemini/pdf-to-summary-pdf',
   apiUrlppt: 'http://localhost:8080/api/google-cloud/gemini/pdf-to-summary-ppt',
   apiUrlfilesave: 'http://localhost:8080/api/filesave',
-  apiUrlytPptx: 'http://localhost:8080/api/youtube/create-pptx-from-url'
+  apiUrlytPptx: 'http://localhost:8080/api/youtube/create-pptx-from-url',
+  client_id: '418023240864-ab1snvb3loio7dllf4pnc1l2hagv72ep.apps.googleusercontent.com'
 };

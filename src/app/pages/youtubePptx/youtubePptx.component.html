@@ -4,23 +4,35 @@
     <p>Introduce la URL de un video de YouTube y obtén un resumen en formato de presentación.</p>
   </div>
 
-  <div class="pptx-uploader-container">
+  <div class="pptx-uploader-form">
     <h2>Generar Presentación PPTX de Resumen con Gemini</h2>
+    <p>Pega el enlace de YouTube para generar tu presentación automáticamente.</p>
 
-    <div class="form-group">
-      <label for="youtubeUrl">URL de YouTube:</label>
-      <input type="text" id="youtubeUrl" class="text" [(ngModel)]="youtubeUrl" placeholder="Ej: https://www.youtube.com/watch?v=..." />
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="youtubeUrl">URL de YouTube:</label>
+        <input
+          type="text"
+          id="youtubeUrl"
+          placeholder="Ej: https://www.youtube.com/watch?v=..."
+          [(ngModel)]="youtubeUrl"
+        />
+        <small>Ejemplo: https://www.youtube.com/watch?v=abc123</small>
+      </div>
     </div>
 
-    <button class="submit" (click)="generatePptxFromYoutubeUrl()" [disabled]="!youtubeUrl || isLoading">
-      {{ isLoading ? 'Generando PPTX...' : 'Generar PPTX desde URL' }}
-    </button>
+    <div class="action-buttons">
+      <button class="clear" (click)="youtubeUrl=''" [disabled]="isLoading">Limpiar Campos</button>
+      <button (click)="generatePptxFromYoutubeUrl()" [disabled]="!youtubeUrl || isLoading">
+        {{ isLoading ? 'Generando PPTX...' : 'Generar PPTX desde URL' }}
+      </button>
+    </div>
 
     <div *ngIf="message" [class]="isError ? 'error-message' : 'success-message'">
       {{ message }}
     </div>
 
-    <a *ngIf="downloadUrl" [href]="downloadUrl" [download]="downloadFileName">
+    <a *ngIf="downloadUrl" [href]="downloadUrl" [download]="downloadFileName" class="btn btn-success mt-2">
       Descargar Resumen PPTX
     </a>
   </div>

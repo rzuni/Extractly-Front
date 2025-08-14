@@ -40,6 +40,25 @@ export const routes: Routes = [
         }
       },
       {
+        path: 'login',
+        component: LoginComponent,
+        canActivate: [GuestGuard],
+      },
+      {
+        path: 'signup',
+        component: SigUpComponent,
+        canActivate: [GuestGuard],
+      },
+      {
+        path: 'access-denied',
+        component: AccessDeniedComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
+      },
+      {
         path: 'dashboard',
         component: DashboardComponent,
         data: {
